@@ -200,20 +200,20 @@ const nftData = [
     ownerImgSrc:
       "https://media.licdn.com/dms/image/v2/C4D03AQFyTrc5fazD9g/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1633469514405?e=2147483647&v=beta&t=GrPdgBnhYW9-n31sCxyZu17T-laDWc9O-MzmvdLrXYc",
     ownerName: "Alice Crypto",
-    nftImgSrc: "/images/boredApe1.png",
+    nftImgSrc: "/video/boredApe1.png",
     collectionName: "Cyber Beasts",
     price: "2.5 ETH",
     countdown: { days: 3, hours: 12, mins: 45, sec: 30 },
   },
-  // {
-  //   name: "Neon Samurai",
-  //   ownerImgSrc: "/images/owner2.png",
-  //   ownerName: "SamuraiX",
-  //   nftImgSrc: "/images/boredApe2.png",
-  //   collectionName: "Futuristic Warriors",
-  //   price: "3.1 ETH",
-  //   countdown: { days: 1, hours: 8, mins: 20, sec: 15 },
-  // },
+  {
+    name: "Neon Samurai",
+    ownerImgSrc: "/images/dragonNft.webm",
+    ownerName: "SamuraiX",
+    nftVideoSrc: "/video/dragonNft.webm",
+    collectionName: "Futuristic Warriors",
+    price: "3.1 ETH",
+    countdown: { days: 1, hours: 8, mins: 20, sec: 15 },
+  },
   {
     name: "Pixel Panther",
     ownerImgSrc: "/images/owner3.png",
@@ -352,8 +352,23 @@ export const OfferSection = () => {
             />
           </div>
         </div>
-        <div className=" p-6 rounded-2xl bg-white/90 absolute top-1 right-[15%] z-20">
-          <img src={nft.nftImgSrc} className="w-[780px] rounded-2xl " />
+        <div className=" w-fit my-auto mx-auto rounded-2xl bg-white/90    ">
+          <video
+            className=" rounded-2xl "
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            style={{ display: "block", visibility: "visible" }}
+          >
+            <source
+              src="/video/harryNFT.webm"
+              className="w-full "
+              type="video/webm"
+            />
+            Your browser doesn't support the video tag.
+          </video>
         </div>
       </div>
     </section>
