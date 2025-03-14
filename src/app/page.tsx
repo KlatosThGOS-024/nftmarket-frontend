@@ -1,7 +1,10 @@
 import { Footer } from "@/components/Footer/Footer";
 import { HeroSection } from "@/components/HeroSection/HeroSection";
 import { NavBar } from "@/components/NavBar/NavBar";
-import { OfferSection } from "@/components/OfferSection/OfferSection";
+import {
+  InfoSection,
+  OfferSection,
+} from "@/components/OfferSection/OfferSection";
 
 export default function Home() {
   return (
@@ -17,6 +20,7 @@ export default function Home() {
           <HeroSection />
         </div>
       </div>
+      <InfoSection />
       <OfferSection />
       <Footer />
     </>
