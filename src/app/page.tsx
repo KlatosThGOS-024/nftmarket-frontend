@@ -1,6 +1,7 @@
 import { Footer } from "@/components/Footer/Footer";
 import { HeroSection } from "@/components/HeroSection/HeroSection";
 import { NavBar } from "@/components/NavBar/NavBar";
+import { FilterSection } from "@/components/OfferSection/FilterSection";
 import {
   InfoSection,
   OfferSection,
@@ -20,6 +21,7 @@ export default function Home() {
           <HeroSection />
         </div>
       </div>
+      <FilterSection />
       <InfoSection />
       <OfferSection />
       <Footer />
