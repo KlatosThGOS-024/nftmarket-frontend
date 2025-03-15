@@ -10,3 +10,15 @@ body {
   margin: 0;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+.animate-blink {
+  animation: blink 1.5s infinite ease-in-out;
+}
