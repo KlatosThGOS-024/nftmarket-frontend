@@ -22,3 +22,6 @@ body {
 .animate-blink {
   animation: blink 1.5s infinite ease-in-out;
 }
+::-webkit-scrollbar {
+  display: none;
+}

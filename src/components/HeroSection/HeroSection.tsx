@@ -5,15 +5,20 @@ import { Button } from "../NavBar/Button";
 export const HeroSection = () => {
   return (
     <section>
-      <div className="max-md:p-2  px-[96px]  py-[64px] ">
+      <div
+        className="max-md:p-2 max-sm:w-[475px]  px-[96px]  overflow-x-hidden 
+       py-[64px] "
+      >
         {" "}
         <div
-          className="w-full bg-[url('/images/1.png')] bg-cover bg-center 
-         opacity-100 brightness-80 h-[640px] max-xl:h-[400px] max-w-full
-       bg--400 mx-auto  "
+          className="
+          bg-[url('/images/1.png')] bg-cover bg-center  
+         opacity-100 brightness-80  max-xl:h-[400px]
+          max-sm:w-full rounded-xl 
+        mx-auto    "
         >
           {" "}
-          <div className="w-full flex items-center  justify-center">
+          <div className="w-full max-sm:w-[500px] flex items-center  justify-center">
             {" "}
             <div className="w-1/2 max-lg:w-full mt-[96px] px-[48px] space-y-[18px]">
               <h3 className="   text-white text-[38px] max-lg:text-[28px]">

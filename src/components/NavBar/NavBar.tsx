@@ -15,12 +15,12 @@ export const NavBar = () => {
   };
   return (
     <section>
-      {/* <div>
-        <img className="relative opacity-20" src="images/1.png" />
-      </div>
-     */}{" "}
-      <div className="flex items-center justify-between px-8 py-[14px]">
-        <div className="flex items-center gap-4">
+      <div
+        className="flex items-center  justify-between px-8 overflow-hidden
+x max-sm:w-[465px] 
+      py-[14px]"
+      >
+        <div className="flex items-center gap-4  overflow-hidden ">
           <div className="flex gap-2 items-center">
             <Image
               src="https://opensea.io/static/images/logos/opensea-logo.svg"
@@ -50,7 +50,7 @@ export const NavBar = () => {
           <input placeholder="search" className="w-full outline-0"></input>
           <div className="rounded-lg px-3 py-2  bg-white/20 w-fit ">/</div>
         </div>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 ">
           <div className="rounded-xl bg-white/15 max-lg:block hidden  p-3 max-md:p-2 ">
             {" "}
             <BiSearch className=" w-6 h-6 " />{" "}

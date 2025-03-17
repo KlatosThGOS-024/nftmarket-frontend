@@ -39,6 +39,58 @@ import { FaEthereum } from "react-icons/fa";
 import { LuTimer } from "react-icons/lu";
 import { Button } from "../NavBar/Button";
 import { useEffect, useState } from "react";
+
+export const InfoSection = () => {
+  return (
+    <section className="bg-[#111112]">
+      <div
+        className="max-md:p-2 w-full mx-auto px-[96px] lg:w-full max-md:w-[900px]
+        flex gap-7 items-center py-[64px] "
+      >
+        <div className="relative ">
+          <img
+            className="w-[980px] h-[980px] lg:absolute max-lg:block max-lg:h-[700px]
+             max-lg:w-[700px]
+             z-20 -top-30 "
+            src="/images/boredApe.png"
+          />
+        </div>
+
+        <div
+          className=" w-fit bg-[#262628] rounded-xl 
+        p-[98px]"
+        >
+          <h3 className=" text-white text-[68px]">VIP Channel</h3>
+          <span
+            className=" text-[#8fff6A] flex items-center
+             gap-3 
+          text-[48px]"
+          >
+            <RiNftLine /> 550%
+          </span>
+          <ul>
+            <li className="gap-2 text-white text-[21px] flex items-center">
+              <IoIosCheckmark className="w-6 h-6" />
+              <span>AI-powered NFT auctions</span>
+            </li>
+            <li className="gap-2 text-white text-[21px] flex items-center">
+              <IoIosCheckmark className="w-6 h-6" />
+              <span>Gas-free instant transactions</span>
+            </li>
+            <li className="gap-2 flex text-white text-[21px] items-center">
+              <IoIosCheckmark className="w-6 h-6" />
+              <span>Cross-chain NFT support</span>
+            </li>
+          </ul>
+        </div>
+
+        <div className="bg-[#262628] rounded-xl ">
+          <FaLongArrowAltDown className=" w-[98px] h-[96px]" />
+        </div>
+      </div>
+    </section>
+  );
+};
 export const OfferSection = () => {
   const [index, setIndex] = useState(0);
   const [nft, setNft] = useState(nftData[index]);
@@ -60,13 +112,19 @@ export const OfferSection = () => {
     setNft(nftData[index]);
   }, [index]);
   return (
-    <section className="text-white/90 " id="offerSection">
+    <section
+      className="text-white/90  2xl:flex items-center gap-5 2xl:flex-row w-full bg-[#111112]  "
+      id="offerSection"
+    >
       <div
-        className="max-md:p-2 w-full flex relative 
-        mx-auto px-[96px] bg-[#111112] 
+        className="max-md:px-6 w-full flex relative   lg:w-[1400px] mx-auto
+        px-[96px] max-lg:flex-col
        py-[96px] "
       >
-        <div className="bg-[#262628] z-30 shadow-2xl w-1/2 py-9 rounded-xl  px-[64px]">
+        <div
+          className="bg-[#262628] max-lg:w-full   z-30 shadow-2xl   
+        lg:w-fit py-9 rounded-xl max-lg:px-[64px] lg:px-[96px]"
+        >
           <h2 className=" text-black  text-[48px] ">
             <span className="" id="hd1">
               Most
@@ -112,19 +170,27 @@ export const OfferSection = () => {
 
             <ul className="flex gap-9 text-white/90 ">
               <li className="space-y-1 flex flex-col items-center">
-                <span className="text-[48px]">{nft.countdown.days}</span>
+                <span className="max-lg:text-[28px] text-[48px]">
+                  {nft.countdown.days}
+                </span>
                 <span className="text-[28px]">Days</span>
               </li>
               <li className="space-y-1 flex flex-col items-center">
-                <text className="text-[48px]">{nft.countdown.hours}</text>
+                <text className="max-lg:text-[28px] text-[48px]">
+                  {nft.countdown.hours}
+                </text>
                 <span className="text-[28px]">Hours</span>
               </li>
               <li className="space-y-1 flex flex-col items-center">
-                <text className="text-[48px]">{nft.countdown.mins}</text>
+                <text className=" max-lg:text-[28px] text-[48px]">
+                  {nft.countdown.mins}
+                </text>
                 <span className="text-[28px]">Mins</span>
               </li>
               <li className="space-y-1 flex flex-col items-center">
-                <text className="text-[48px]">{nft.countdown.sec}</text>
+                <text className=" max-lg:text-[28px]  text-[48px]">
+                  {nft.countdown.sec}
+                </text>
                 <span className="text-[28px]">Secs</span>
               </li>
             </ul>
@@ -132,17 +198,17 @@ export const OfferSection = () => {
           <div className="flex  gap-4 w-full items-center  justify-center mt-9">
             <Button
               prop="Mint"
-              tailwindAttributes="bg-[#4D5051] text-[28px] shadow-2xl px-9 py-3"
+              tailwindAttributes="bg-[#4D5051] text-[28px] max-lg:text-[21px]  shadow-2xl px-9 py-3"
             />
             <Button
               prop="Buy"
-              tailwindAttributes="bg-[#4D5051] text-[28px] shadow-2xl px-9 py-3"
+              tailwindAttributes="bg-[#4D5051] text-[28px] max-lg:text-[21px] shadow-2xl px-9 py-3"
             />
           </div>
-          <div className="flex items-center gap-4 ">
+          <div className="flex items-center gap-4 max-lg:mt-4 ">
             <FaLeftLong
               onClick={indexHandlerLeft}
-              className="w-9 h-9 cursor-pointer"
+              className="w-9 h-9  cursor-pointer"
             />
             <FaRightLong
               onClick={indexHandlerRight}
@@ -150,59 +216,16 @@ export const OfferSection = () => {
             />
           </div>
         </div>
-        <div className=" p-6 rounded-2xl bg-white/90 absolute top-1 right-[15%] z-20">
-          <img src={nft.nftImgSrc} className="w-[780px] rounded-2xl " />
+        <div
+          className="p-6 max-lg:px-5 rounded-2xl bg-white/90 max-lg:w-full lg:w-[570px] 
+ lg:absolute lg:top-19 lg:left-[40%]  z-20"
+        >
+          <img src={nft.nftImgSrc} className="w-full  rounded-2xl " />
         </div>
       </div>
-    </section>
-  );
-};
-
-export const InfoSection = () => {
-  return (
-    <section className="bg-[#111112]">
-      <div
-        className="max-md:p-2w w-full mx-auto px-[96px] 
-        flex gap-7 items-center py-[64px] "
-      >
-        <div className="relative ">
-          <div
-            className="bg-[#262628] rounded-xl h-[740px] mt-[120px]
-           w-[980px]"
-          ></div>
-          <img
-            className="w-[980px] h-[980px] absolute z-20 -top-30 "
-            src="/images/boredApe.png"
-          />
-        </div>
-
-        <div className=" w-fit bg-[#262628] rounded-xl p-[98px]">
-          <h3 className=" text-white text-[68px]">VIP Channel</h3>
-          <span
-            className=" text-[#8fff6A] flex items-center gap-3 
-          text-[48px]"
-          >
-            <RiNftLine /> 550%
-          </span>
-          <ul>
-            <li className="gap-2 text-white text-[21px] flex items-center">
-              <IoIosCheckmark className="w-6 h-6" />
-              <span>AI-powered NFT auctions</span>
-            </li>
-            <li className="gap-2 text-white text-[21px] flex items-center">
-              <IoIosCheckmark className="w-6 h-6" />
-              <span>Gas-free instant transactions</span>
-            </li>
-            <li className="gap-2 flex text-white text-[21px] items-center">
-              <IoIosCheckmark className="w-6 h-6" />
-              <span>Cross-chain NFT support</span>
-            </li>
-          </ul>
-        </div>
-
-        <div className="bg-[#262628] rounded-xl ">
-          <FaLongArrowAltDown className=" w-[98px] h-[96px]" />
-        </div>
+      <div className="max-2xl:hidden">
+        {" "}
+        <InfoSection />
       </div>
     </section>
   );
